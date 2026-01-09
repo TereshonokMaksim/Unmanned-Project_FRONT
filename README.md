@@ -116,36 +116,31 @@ flowchart LR
     A(src) --> G([index.tsx])
 
 
-    LA(app dummy):::hidden --> DB(layout)
-    LA(app dummy):::hidden --> DC([App.tsx])
-    LA(app dummy):::hidden --> DD([AppRoutes.tsx])
-    LA(app dummy):::hidden --> DE([index.ts])
-    LA(app dummy):::hidden --> DE([react-app-env.d.ts])
-
-    L --> LA
-
-    KA(assets dummy):::hidden --> KB(images)
-    KA(assets dummy):::hidden --> KC(vectors)
-
-    KB(images):::hidden --> KDB([image1.png])
-    KB(images):::hidden --> KDC([image2.png])
-    KB(images):::hidden --> KDD([image3.png])
-
-    KC(vectors):::hidden --> KDB([vector1.svg])
-    KC(vectors):::hidden --> KDC([vector2.svg])
-    KC(vectors):::hidden --> KDD([vector3.svg])
+    L(app) --> DB(layout)
+    L(app) --> DC([App.tsx])
+    L(app) --> DD([AppRoutes.tsx])
+    L(app) --> DE([index.ts])
+    L(app) --> DE([react-app-env.d.ts])
 
 
-    K --> KA
+    K(assets) --> KB(images)
+    K(assets) --> KC(vectors)
+
+    KB(images) --> KDB([image1.png])
+    KB(images) --> KDC([image2.png])
+    KB(images) --> KDD([image3.png])
+
+    KC(vectors) --> KDB([vector1.svg])
+    KC(vectors) --> KDC([vector2.svg])
+    KC(vectors) --> KDD([vector3.svg])
 
 
-    JA(components dummy):::hidden --> JB(component name)
+    J(components) --> JB(component name)
 
     JB(component name) --> JBA([component name.tsx])
     JB(component name) --> JBB([component name.module.css])
     JB(component name) --> JBC([index.ts])
 
-    J --> JA
 
     IA(pages dummy):::hidden --> IB(page name)
 
