@@ -168,6 +168,9 @@ flowchart LR
 
 # Pages [↑](#navigation)
 
+<details>
+<summary><b>Short description list for every page</b></summary>
+
 __Home Page__
 - This page is a landing page
 - It has basic information about site and about us
@@ -228,6 +231,7 @@ __Addresses Page__
 - It allows to edit any of your addresses/destinations
 - Has usual Layout 
 
+</details>
 
 # Additional [↑](#navigation)
 ## Code Style [↑](#navigation)
