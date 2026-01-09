@@ -1,0 +1,11 @@
+#root{
+    overflow: hidden;
+}
+
+main{
+    overflow-y: scroll;
+    max-width: 100vw;
+    min-width: 100vw;
+    background-color: #282828;
+    flex: 1;
+}
