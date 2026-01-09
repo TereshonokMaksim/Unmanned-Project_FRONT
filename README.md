@@ -120,19 +120,19 @@ flowchart LR
     L(app) --> DC([App.tsx])
     L(app) --> DD([AppRoutes.tsx])
     L(app) --> DE([index.ts])
-    L(app) --> DE([react-app-env.d.ts])
+    L(app) --> DF([react-app-env.d.ts])
 
 
     K(assets) --> KB(images)
     K(assets) --> KC(vectors)
 
-    KB(images) --> KDB([image1.png])
-    KB(images) --> KDC([image2.png])
-    KB(images) --> KDD([image3.png])
+    KB(images) --> KBB([image1.png])
+    KB(images) --> KBC([image2.png])
+    KB(images) --> KBD([image3.png])
 
-    KC(vectors) --> KDB([vector1.svg])
-    KC(vectors) --> KDC([vector2.svg])
-    KC(vectors) --> KDD([vector3.svg])
+    KC(vectors) --> KCB([vector1.svg])
+    KC(vectors) --> KCC([vector2.svg])
+    KC(vectors) --> KCD([vector3.svg])
 
 
     J(components) --> JB(component name)
@@ -142,13 +142,12 @@ flowchart LR
     JB(component name) --> JBC([index.ts])
 
 
-    IA(pages dummy):::hidden --> IB(page name)
+    I(pages) --> IB(page name)
 
     IB(page name) --> IBA([page name.tsx])
     IB(page name) --> IBB([page name.module.css])
     IB(page name) --> IBC([index.ts])
 
-    I --> IA
 
     H(images) --> HB(hooks)
     H(images) --> HC(types)
@@ -163,9 +162,6 @@ flowchart LR
     HC(types) --> HCB([type1.tsx])
     HC(types) --> HCC([type2.tsx])
     HC(types) --> HCD([type3.tsx])
-
-
-    classDef hidden display: none
 ```
 
 </details>
