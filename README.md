@@ -1,8 +1,41 @@
 # Unmanned - Drone themed shop!
 
-## _For more information, look on our [backend project](https://github.com/TereshonokMaksim/Unmanned-Project)_
+-----
+
+# Navigation
+
+- [Team](#team-)
+- [Architecture](#code-architecture-)
+- [Structure](#project-structure-)
+- [Pages](#)
+- [Additional: Code Style](#code-style-)
+- [Additional: More Info](#more-info-)
+
+-----
+
+# Team [↑](#navigation)
+
+- [Tereshonok Maksym](https://github.com/TereshonokMaksim) - Teamlead.
+- [Mozgoviy Artem](https://github.com/MozgoviyArtem) - Team Member.
+- [Tkachuk Gleb](https://github.com/Gleb-Tkachuk) - Team Member.
+
+-----
+
+# Code architecture [↑](#navigation)
+
+This project has Backend and Frontend as its 2 main parts. They have unique roles and work together, to create an app.
+- __[Backend](https://github.com/TereshonokMaksim/Unmanned-Project)__ - Everything that happens on server. Client (user) doesn't directly see what happens here, but it heavily influences how Frontend works.
+- __Frontend__ - Everything that happens on client side. Here, client sees and can interact with this site, but it doesn't have heavy logic or databases, so it depends on Backend. 
 
 
+## Frontend architecture
+
+Frontend architecture is based on popular, yet quite simple Onion type architecture, in which there are 4 layers:
+
+- Router - First layer, accepts request and selects corresponding Controller function to process the request. Can also call Middleware as pre-processors.
+- Controller - Second layer, makes basic request processing, has basic data validators and can interact with Service.
+- Service - Third layer. There, lots of so-called Business logic happens, which is essentially just some processes that can be complicated, such as database analysis. 
+- Repository - Fourth layer. It is responsible for accessing database data. It, usually, has no data processing, as it is task of Service or, sometimes, Controller.
 
 
 
