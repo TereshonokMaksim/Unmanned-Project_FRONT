@@ -102,6 +102,7 @@ layout - Folder with component of Layout - usually just merge of several other c
 </details>
 <details>
 <summary><b>Structure described as diagram</b></summary>
+
 ```mermaid
 %%{ init : { "theme" : "default", "flowchart" : { "curve" : "linear" } }}%%
 
@@ -171,8 +172,8 @@ flowchart LR
     H --> HA
 
     classDef hidden display: none
-
 ```
+
 </details>
 
 
