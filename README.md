@@ -155,11 +155,11 @@ flowchart LR
 
     I --> IA
 
-    HA(images dummy) --> HB(hooks)
-    HA(images dummy) --> HC(types)
-    HA(images dummy) --> HD([images.tsx])
-    HA(images dummy) --> HE([vectors.tsx])
-    HA(images dummy) --> HF([index.ts])
+    H(images) --> HB(hooks)
+    H(images) --> HC(types)
+    H(images) --> HD([images.tsx])
+    H(images) --> HE([vectors.tsx])
+    H(images) --> HF([index.ts])
 
     HB(hooks) --> HBB([hook-1.tsx])
     HB(hooks) --> HBC([hook-2.tsx])
@@ -169,7 +169,6 @@ flowchart LR
     HC(types) --> HCC([type2.tsx])
     HC(types) --> HCD([type3.tsx])
 
-    H --> HA
 
     classDef hidden display: none
 ```
