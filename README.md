@@ -1,5 +1,7 @@
 # Unmanned - Drone themed shop!
 
+![Preview Image](./README_media/preview.png)
+
 -----
 
 # Navigation
@@ -30,19 +32,148 @@ This project has Backend and Frontend as its 2 main parts. They have unique role
 
 ## Frontend architecture
 
-Frontend architecture is based on popular, yet quite simple Onion type architecture, in which there are 4 layers:
+Frontend architecture is based on 4 layers, each responsible for different functionality. Each layer has different level of importance and, if most important will break, other layers will break as well. In list below, layers are presented in decreasing list of importance (first layer is most important)
 
-- Router - First layer, accepts request and selects corresponding Controller function to process the request. Can also call Middleware as pre-processors.
-- Controller - Second layer, makes basic request processing, has basic data validators and can interact with Service.
-- Service - Third layer. There, lots of so-called Business logic happens, which is essentially just some processes that can be complicated, such as database analysis. 
-- Repository - Fourth layer. It is responsible for accessing database data. It, usually, has no data processing, as it is task of Service or, sometimes, Controller.
+- __shared__ - First layer, here, functions, elements, types, etc are created. Functions from this layer can be used in many components or pages.\
+- __components__ - Second layer, here, components, which can be reused are created (for example, Header of page or product card). In difference to _shared_ layer, components here are more complex, specific and get better styling.\
+- __pages__ - Third layer, here, pages are assembled from components, which are usually stored in _components_ layer and some things from _shared_. Styles here are, usually, less complex than in _components_, but much more specific.\  
+- __app__ - Fourth and final layer, here, all pages are connected through links in an Application and launching it. It usually contains no styles or components, though it can have things like Layout which are used only in this layer.
+
+---
+
+# Structure [↑](#navigation)
+
+<details>
+<summary><b>Structure described in text</b></summary>
+
+__shared__\
+Contains:
+- images.tsx
+- vectors.tsx
+- types
+- hooks
+
+images.tsx and vectors.tsx are made to store all imports to images and vectors from assets in one file, to make code more organized\
+types contain files which have types for easier work with them in other parts of this applicatioin\
+hooks contain files with custom hooks - additional functions, which are made to simplify work of next layer - __components__
+
+__assets__\
+Contains:
+- images
+- vectors
+
+images - Folder with all static images which are used in the application\
+vectors - Folder with all static vectors (usually .svg files) for the application
+
+__components__\
+Contains:\
+Folders (with name of _component name_) with components, each of them has:
+- _component name_.tsx
+- _component name_.module.css
+
+_component name_.tsx - File with component code - contains logic and HTML of this element. Can use other components to decrease amount of code.\
+_component name_.module.css - File with component styles. Used only inside of this component.\
+Note, that this component can potentially have more components inside of it, if they are used only within it.\
+*_component name_ is a general reference to component, which is created in this folder
+
+__pages__\
+Contains:\
+Folders (with name of _page name_) with pages, each of them has:
+- _page name_.tsx
+- _page name_.module.css
+
+_page name_.tsx - File with component code - contains logic and HTML of this element. Can use other components to decrease amount of code.\
+_page name_.module.css - File with component styles. Used only inside of this component.\
+*_page name_ is a general reference to page, which is created in this folder
+
+__app__\
+Contains:
+- App.tsx
+- AppRoutes.tsx
+- react-app-env.d.ts
+- layout
+
+App.tsx - In this file application is finally assembled and created
+AppRoutes.tsx - File with all pages connected through links, which user can navigate through
+react-app-env.d.ts - Here, import settings are used from other react declaration files. Required for correct work with .css and image files
+layout - Folder with component of Layout - usually just merge of several other components for easier use
+
+*_Note, that many of these folders contain file called index.ts - It is Barrel file or Public API, required only for easier imports and readability_
+</details>
+<details>
+<summary><b>Structure described as diagram</b></summary>
+```mermaid
+%%{ init : { "theme" : "default", "flowchart" : { "curve" : "linear" } }}%%
+
+flowchart LR
+
+    A(src) --> L(app)
+    A(src) --> K(assets)
+    A(src) --> J(components)
+    A(src) --> I(pages)
+    A(src) --> H(shared)
+    A(src) --> G([index.tsx])
 
 
+    LA(app dummy):::hidden --> DB(layout)
+    LA(app dummy):::hidden --> DC([App.tsx])
+    LA(app dummy):::hidden --> DD([AppRoutes.tsx])
+    LA(app dummy):::hidden --> DE([index.ts])
+    LA(app dummy):::hidden --> DE([react-app-env.d.ts])
+
+    L --> LA
+
+    KA(assets dummy):::hidden --> KB(images)
+    KA(assets dummy):::hidden --> KC(vectors)
+
+    KB(images):::hidden --> KDB([image1.png])
+    KB(images):::hidden --> KDC([image2.png])
+    KB(images):::hidden --> KDD([image3.png])
+
+    KC(vectors):::hidden --> KDB([vector1.svg])
+    KC(vectors):::hidden --> KDC([vector2.svg])
+    KC(vectors):::hidden --> KDD([vector3.svg])
 
 
+    K --> KA
 
 
+    JA(components dummy):::hidden --> JB(component name)
 
+    JB(component name) --> JBA([component name.tsx])
+    JB(component name) --> JBB([component name.module.css])
+    JB(component name) --> JBC([index.ts])
+
+    J --> JA
+
+    IA(pages dummy):::hidden --> IB(page name)
+
+    IB(page name) --> IBA([page name.tsx])
+    IB(page name) --> IBB([page name.module.css])
+    IB(page name) --> IBC([index.ts])
+
+    I --> IA
+
+    HA(images dummy) --> HB(hooks)
+    HA(images dummy) --> HC(types)
+    HA(images dummy) --> HD([images.tsx])
+    HA(images dummy) --> HE([vectors.tsx])
+    HA(images dummy) --> HF([index.ts])
+
+    HB(hooks) --> HBB([hook-1.tsx])
+    HB(hooks) --> HBC([hook-2.tsx])
+    HB(hooks) --> HBD([hook-3.tsx])
+
+    HC(types) --> HCB([type1.tsx])
+    HC(types) --> HCC([type2.tsx])
+    HC(types) --> HCD([type3.tsx])
+
+    H --> HA
+
+    classDef hidden display: none
+
+```
+</details>
 
 
 
