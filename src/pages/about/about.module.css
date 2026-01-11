@@ -1,0 +1,106 @@
+/* ПРО НАС */
+.aboutSection {
+  padding: 80px 24px 40px;
+  text-align: center;
+}
+
+.aboutSection h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.aboutSection p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Велике фото */
+.heroImageSection {
+  padding: 0 24px;
+  margin-bottom: 80px;
+}
+
+.heroImageSection img {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 24px;
+}
+
+/* МІСІЯ */
+.missionSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 80px 120px;
+}
+
+.missionText {
+  max-width: 500px;
+}
+
+.missionText h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.missionText p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.missionImage img {
+  width: 480px;
+  border-radius: 24px;
+}
+
+/* КОМАНДА */
+.teamSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 80px 120px;
+}
+
+.teamImage img {
+  width: 480px;
+  border-radius: 24px;
+}
+
+.teamText {
+  max-width: 500px;
+}
+
+.teamText h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.teamText p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* СТАТИСТИКА */
+.statsSection {
+  background: #eef2f6;
+  padding: 60px 80px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.statItem h3 {
+  font-size: 32px;
+  color: #2a6df4;
+  margin-bottom: 8px;
+}
+
+.statItem p {
+  color: #555;
+}

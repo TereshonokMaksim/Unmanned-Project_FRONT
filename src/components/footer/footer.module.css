@@ -1,0 +1,36 @@
+.footer {
+  /* background: #dfe5eb;
+  padding: 60px 80px 40px; */
+  width: 1440px;
+  height: 851px;
+  top: 2325px;
+  padding-left: 39px;
+}
+
+/* .top {
+  margin-bottom: 40px;
+}
+
+.top img {
+  height: 32px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #2a6df4;
+} */
