@@ -1,31 +1,14 @@
 import styles from "./main.module.css"
-// import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { IMAGES, VECTORS } from '../../shared'
 
 export function MainPage(){
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     return (
         <div className={styles["page"]}>
-            {/* <div className={styles.header}>
-                <nav className={styles.nav}>
-                    <Link to="/catalog">КАТАЛОГ</Link>
-                    <Link to="/about">ПРО НАС</Link>
-                    <Link to="/contacts">КОНТАКТИ</Link>
-                </nav>
-
-                <div className={styles.logoBlock} onClick={() => navigate('/')}>
-                    <img src={IMAGES.logo} alt="Logo" />
-                </div>
-
-
-                <div className={styles.profileBlock}>
-                    <VECTORS.profilesvector className={styles.profileIcon} />
-                    <VECTORS.shopvector className={styles.profileIcon} />
-                </div>
-            </div> */}
             <section className={styles.land}>
                 <h1>ТЕХНОЛОГІЇ<br/> ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ</h1>
-                <img src={IMAGES.DroneLandImage} alt = "COOL LAND IMAGE :fire:" />
+                <img src={IMAGES.DroneLandImage} alt = "COOL LAND :fire:" />
                 <div className = {styles.absLandBlock}>
                     <p>
                         Передові технології в одному місці. Обирай найкраще для найважливішого.
@@ -41,7 +24,7 @@ export function MainPage(){
                     Пропонуємо дрони й тепловізори, перевірені у найскладніших умовах. <br/>
                     Обираємо тільки те, чому довіряємо самі.
                 </p>
-                <button>
+                <button onClick = {() => {navigate("/about")}}>
                     <p>Детальніше</p>
                     <VECTORS.ButtonArrowVector/>
                 </button>
@@ -136,14 +119,11 @@ export function MainPage(){
                     </div>
                 </div>
 
-                <button>
+                <button onClick = {() => {navigate("/catalog")}}>
                     <p>ДИВИТИСЬ ВСІ</p>
                     <VECTORS.ButtonArrowVector/>
                 </button>
             </section>
-        {/* <div className={styles.footer}>
-            <img src={IMAGES.footerimg} alt="footer" />
-        </div> */}
 
       </div>
 

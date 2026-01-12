@@ -1,5 +1,6 @@
 import styles from './footer.module.css'
 import { IMAGES } from '../../shared'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
 	return (
@@ -34,11 +35,11 @@ export function Footer() {
 			<img src = {IMAGES.Drones} alt="DRONES" />
 
 			<div className = {styles.footerLinkBlock}>
-				<a href = "#">КАТАЛОГ</a>
-				<a href = "#">ПРО НАС</a>
-				<a href = "#">КОНТАКТИ</a>
-				<a href = "#">КОШИК</a>
-				<a href = "#">КАБІНЕТ</a>
+				<Link to = "/catalog	">КАТАЛОГ</Link>
+				<Link to = "/about">ПРО НАС</Link>
+				<Link to = "/contacts">КОНТАКТИ</Link>
+				<Link to = "/cart">КОШИК</Link>
+				<Link to = "/cabinet">КАБІНЕТ</Link>
 			</div>
 
 			<p className = {styles.footerEnd}>© 2025 Drones Всі права захищені.</p>
