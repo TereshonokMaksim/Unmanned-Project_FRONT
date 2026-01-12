@@ -1,65 +1,353 @@
-.header{
-  width: 100%;
-  height: 80px;
-  background: #E4E4E7;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: center;
+.page{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 100px;
 }
 
-.inner {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.land{
+	width: 100%;
+	padding-top: 250px;
+	background-color: #CDD5DD;
+	/* clip-path: ellipse(61.5% 417.5px at 50% 115%); */
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 851px;
+	position: relative;
 }
 
-.nav {
-  display: flex;
-  gap: 32px;
+/* After on divs? I learned this 5 mins ago, no AI copy paste */
+.land::after{
+	content: "";
+	inset: 0;
+	position: absolute;
+	background: #fff;
+	clip-path: ellipse(61.5% 417.5px at 50% 115%);
+	z-index: 0;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
+.land h1{
+	text-align: center;
+	font-size: 61px;
+	letter-spacing: 3%;
+	color: white;
+	z-index: 1;
+	font-family: "GTWP Ultrabold", sans-serif;
 }
 
-.nav a:hover {
-  color: #2a6df4;
+.land .absLandBlock{
+	position: absolute;
+	bottom: 0;
+	right: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	height: 120px;
+	width: 320px;
+	justify-content: space-between;
+	z-index: 1;
 }
 
-
-.logoBlock {
-  cursor: pointer;
+.absLandBlock p{
+	width: 100%;
+	color: #0C122A;
+	font-size: 16px;
 }
 
-.logoBlock img {
-  height: 32px;
+.absLandBlock button{
+	padding: 18px 40px;
+	background-color: #0C122A;
+	border-radius: 100px;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: white;
+	line-height: 100%;
+	font-family: "GTWP Bold", sans-serif;
 }
 
-
-.profileBlock {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.land img{
+	transform: rotate(11.29deg);
+	position: absolute;
+	width: 811px;
+	height: 811px;
+	top: 218px;
+	margin: auto;
+	z-index: 2;
 }
 
-.profileIcon {
-  width: 20px;
-  height: 20px;
-  color: #333;
+/* ABOUT PART (YEEEE) */
+
+.about{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
 }
-.footer {
-  width: 1440px;
-  height: 851px;
-  top: 2325px;
-  padding-left: 39px;
+
+.about h2{
+	color: #CDD5DD;
+	font-family: "GTWP Ultrabold", sans-serif;
+	font-size: 44px;
+}
+
+.about .aboutMainText{
+	color: #0C122A;
+	font-size: 16px;
+	text-align: center;
+}
+
+.about button{
+	padding: 18px 40px;
+	border: 1.5px solid #0C122A;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	background-color: transparent;
+	border-radius: 100px;
+	align-items: center;
+
+	height: fit-content;
+	width: fit-content;
+
+}
+
+.about button p{
+	color: #0C122A;
+	font-family: "GTWP Bold", sans-serif;
+	font-size: 16px;
+}
+
+.about button svg{
+	width: 24px;
+	height: 24px;
+}
+
+/* NEW PART (ohno) */
+
+.new{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 100px;
+}
+
+.new h2{
+	color: #CDD5DD;
+	font-family: "GTWP Ultrabold", sans-serif;
+	font-size: 44px;
+}
+
+.new .cards {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}
+
+.card{
+	position: relative;
+	border-radius: 10px;
+	width: 437px;
+	height: 437px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	padding: 250px 24px 0px;
+}
+
+.card::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(#fffaaa00, var(--gcolor, #fff));
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	border-radius: inherit;
+}
+
+.cardDroneImg{
+	width: 265px;
+	height: 265px;
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: -27%;
+	z-index: 3;
+}
+
+.cardBGLimiter{
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 437px;
+	height: 437px;
+	border-radius: 10px;
+	position: absolute;
+	z-index: 0;
+}
+
+.cardBGimg{
+	position: absolute;
+	top: 0;
+	margin: auto;
+	height: 100%;
+	object-fit: cover;
+}
+
+.titleCard{
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: start;
+}
+
+.titleCard h3{
+	font-family: "GTWP Medium", sans-serif;
+	font-size: 44px;
+	color: white;
+}
+
+.titleCard p{
+	font-size: 16px;
+	color: white;
+}
+
+.dataCard{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	z-index: 3;
+	align-items: center;
+}
+
+.dataCard span{
+	font-family: "GTWP Medium", sans-serif;
+	font-size: 14px;
+	color: white;
+}
+
+.dataCard button {
+	padding: 12px 16px;
+	border: 1px solid white;
+	display: flex;
+	flex-direction: row;
+	gap: 14px;
+	background-color: transparent;
+	border-radius: 100px;
+	align-items: center;
+
+	height: fit-content;
+	width: fit-content;
+}
+
+.dataCard button p {
+	font-size: 14px;
+	font-family: "GTWP Medium";
+	color: white;
+}
+
+.dataCard button svg {
+	height: 16px;
+	width: 16px;
+	filter: invert(100%);
+}
+
+/* CATALOGUE */
+
+.catalog{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 44px;
+}
+
+.catalog h2{
+	color: #CDD5DD;
+	font-family: "GTWP Ultrabold", sans-serif;
+	font-size: 44px;
+}
+
+.catalogueList{
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	justify-content: center;
+}
+
+.catalogItem{
+	display: flex;
+	flex-direction: column;
+	padding: 14px;
+	position: relative;
+	justify-content: end;
+	align-items: start;
+	height: 363px;
+	width: 332px;
+}
+
+.catalogItem img{
+	position: absolute;
+	top: 0;
+	margin: auto;
+	height: 261px;
+	width: 261px;
+	object-fit: cover;
+	overflow: visible;
+}
+
+.catalogItem h6{
+	font-family: "GTWP Medium", sans-serif;
+	font-size: 24px;
+}
+
+.catalogItem .catalogItemPrice{
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	color: #0C122A;
+	font-family: "GTWP Medium", sans-serif;
+}
+
+.oldPrice{
+	text-decoration: line-through;
+}
+
+.newPrice{
+	color: #B62D11;
+}
+
+.catalog button{
+	padding: 18px 40px;
+	border: 1px solid white;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	background-color: #0C122A;
+	border-radius: 100px;
+	align-items: center;
+
+	height: fit-content;
+	width: fit-content;
+}
+
+.catalog button p {
+	font-size: 14px;
+	font-family: "GTWP Bold";
+	color: white;
+}
+
+.catalog button svg {
+	height: 24px;
+	width: 24x;
+	filter: invert(100%);
+}
+
+main{
+	padding-bottom: 100px;
 }

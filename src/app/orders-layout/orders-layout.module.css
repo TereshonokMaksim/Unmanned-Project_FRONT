@@ -9,7 +9,8 @@
     overflow: hidden;
 }
 
-.layout{
+.ordLayout{
+    position: relative;
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -17,6 +18,8 @@
     align-content: center;
     min-height: 100vh;
     max-height: fit-content;
+    background-color: #DDD;
+    justify-content: space-between;
 }
 
 body::-webkit-scrollbar{

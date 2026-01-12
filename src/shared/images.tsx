@@ -7,20 +7,34 @@ import aboutimg from "../assets/images/aboutus.png"
 import ourmissionimg from "../assets/images/ourmission.png"
 import trustteamimg from "../assets/images/trustteam.png"
 import footerimg from "../assets/images/footer.png"
-import drone1 from "../assets/images/djkmini4k(1).png"
+import Drone_DJIMini4Pro from "../assets/images/DJIMini4Pro.png"
+import Drone_DJIMini4K from "../assets/images/DJIMini4K.png"
 import drone2 from "../assets/images/djkmini4k(2).png"
 import drone3 from "../assets/images/4kpro.png"
 import drone4 from "../assets/images/flip.png"
+import DroneLandImage from "../assets/images/DroneLandImage.png"
+
+import desertBG from "../assets/images/desertBG.png"
+import forestBG from "../assets/images/forestBG.png"
+import lakeBG from "../assets/images/lakeBG.png"
+
+import Drones from "../assets/images/Drones.png"
 
 
 export const IMAGES ={
-    logo:logo,
-    aboutimg:aboutimg,
-    ourmissionimg:ourmissionimg,
-    trustteamimg:trustteamimg,
-    footerimg:footerimg,
-    drone1:drone1,
-    drone2:drone2,
-    drone3:drone3,
-    drone4:drone4,
+    logo,
+    aboutimg,
+    ourmissionimg,
+    trustteamimg,
+    footerimg,
+    Drone_DJIMini4Pro,
+    Drone_DJIMini4K,
+    drone2,
+    drone3,
+    drone4,
+    DroneLandImage,
+    desertBG,
+    forestBG, 
+    lakeBG,
+    Drones
 } 

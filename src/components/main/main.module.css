@@ -1,4 +1,26 @@
 .main {
-  width: 100%;
-  background: #ffffff;
+	width: 100%;
+	/* background: #ffffff; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+@font-face {
+    font-family: "GTWP Regular";
+    src: url('../../assets/fonts/GTWalsheimPro-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "GTWP Medium";
+    src: url('../../assets/fonts/GTWalsheimPro-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "GTWP Bold";
+    src: url('../../assets/fonts/GTWalsheimPro-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "GTWP UltraBold";
+    src: url('../../assets/fonts/GTWalsheimPro-UltraBold.ttf') format('truetype');
 }
