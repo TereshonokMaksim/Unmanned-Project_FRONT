@@ -1,9 +1,11 @@
 import styles from "./main.module.css"
 import { useNavigate } from 'react-router-dom'
 import { IMAGES, VECTORS } from '../../shared'
+import { UseGetProducts } from "../../shared/api/hooks/use-get-products"
 
 export function MainPage(){
     const navigate = useNavigate()
+    // const { products, isLoad, error} = UseGetProducts() ///////////////////////////////////////////////////////////////////////////////////////////
     return (
         <div className={styles["page"]}>
             <section className={styles.land}>
