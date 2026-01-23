@@ -1,11 +1,52 @@
 import styles from "./main.module.css"
 import { useNavigate } from 'react-router-dom'
-import { IMAGES, VECTORS } from '../../shared'
-import { UseGetProducts } from "../../shared/api/hooks/use-get-products"
+import { IMAGES, Product, VECTORS } from '../../shared'
+import { UseGetSpecialProducts } from "../../shared"
+import { NewProductCard, CatalogueProductCard } from "../../components"
 
 export function MainPage(){
+    const {products, isLoad: newProdLoad, error: newProdError} = UseGetSpecialProducts(true, false)
+    const {products: popProducts, isLoad: popProdLoad, error: popProdError} = UseGetSpecialProducts(false, true)
     const navigate = useNavigate()
-    // const { products, isLoad, error} = UseGetProducts() ///////////////////////////////////////////////////////////////////////////////////////////
+    const preSetProductData = [
+        {
+            "gcolor": "#F5BE4F", 
+            "bgImage": IMAGES.desertBG,
+            "droneImage": IMAGES.Drone_DJIMini4K,
+            "index": 0
+        },
+        {
+            "gcolor": "#1A271B", 
+            "bgImage": IMAGES.forestBG,
+            "droneImage": IMAGES.Drone_DJIMini4Pro,
+            "index": 1
+        },
+        {
+            "gcolor": "#4F94A4", 
+            "bgImage": IMAGES.lakeBG,
+            "droneImage": IMAGES.Drone_DJIMini4K,
+            "index": 2
+        }
+    ]
+    const preSetPopProdData = [
+        {
+            "image": IMAGES.Drone_DJIMini4K,
+            "index": 0
+        },
+        {
+            "image": IMAGES.Drone_DJIMini4Pro,
+            "index": 1
+        },
+        {
+            "image": IMAGES.Drone_DJIMini4K,
+            "index": 2
+        },
+        {
+            "image": IMAGES.Drone_DJIMini4K,
+            "index": 3
+        },
+    ]
+    
     return (
         <div className={styles["page"]}>
             <section className={styles.land}>
@@ -36,59 +77,25 @@ export function MainPage(){
                 <h2>НОВЕ НА САЙТІ</h2>
 
                 <div className={styles.cards}>
-                    <div className={styles.card} style = {{"--gcolor": "#F5BE4F"} as React.CSSProperties}>
-                        <img src={IMAGES.Drone_DJIMini4K} alt="Drone" className = {styles.cardDroneImg} />
-                        <div className = {styles.cardBGLimiter}>
-                            <img className = {styles.cardBGimg} src = {IMAGES.desertBG} alt="BG" />    
-                        </div>
-                        <div className = {styles.titleCard}>
-                            <h3>DJI Mini 4K</h3>
-                            <p>Easy-To-Use Mini Camera Drone</p>
-                        </div>
-                        <div className = {styles.dataCard}>
-                            <span>from to 299$</span>
-                            <button>
-                                <p>КУПИТИ</p>
-                                <VECTORS.ButtonArrowVector/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className={styles.card} style = {{"--gcolor": "#1A271B"} as React.CSSProperties}>
-                        <img src={IMAGES.Drone_DJIMini4Pro} alt="Drone" className = {styles.cardDroneImg} />
-                        <div className = {styles.cardBGLimiter}>
-                            <img className = {styles.cardBGimg} src = {IMAGES.forestBG} alt="BG" />
-                        </div>
-                        <div className = {styles.titleCard}>
-                            <h3>DJI Mini Pro</h3>
-                            <p>Easy-To-Use Mini Camera Drone</p>
-                        </div>
-                        <div className = {styles.dataCard}>
-                            <span>from to 299$</span>
-                            <button>
-                                <p>КУПИТИ</p>
-                                <VECTORS.ButtonArrowVector/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className={styles.card} style = {{"--gcolor": "#4F94A4"} as React.CSSProperties}>
-                        <img src={IMAGES.Drone_DJIMini4K} alt="Drone" className = {styles.cardDroneImg} />
-                        <div className = {styles.cardBGLimiter}>
-                            <img className = {styles.cardBGimg} src = {IMAGES.lakeBG} alt="BG" />
-                        </div>
-                        <div className = {styles.titleCard}>
-                            <h3>DJI Mini 4K</h3>
-                            <p>Easy-To-Use Mini Camera Drone</p>
-                        </div>
-                        <div className = {styles.dataCard}>
-                            <span>from to 299$</span>
-                            <button>
-                                <p>КУПИТИ</p>
-                                <VECTORS.ButtonArrowVector/>
-                            </button>
-                        </div>
-                    </div>
+                    {
+                    newProdLoad ? 
+                        <div>wait 2 sec pls</div> :
+                    newProdError ?
+                        <div>Oh no, {newProdError}</div> 
+                    :
+                    preSetProductData.map((el) => {
+                        const productByIndex = products[el.index]
+                        console.log(productByIndex)
+                        return <NewProductCard 
+                                bgImage = {el.bgImage} 
+                                gcolor = {el.gcolor} 
+                                productImage = {el.droneImage} 
+                                productTitle = {productByIndex.name}
+                                productDescription = {productByIndex.description}
+                                productPrice = {productByIndex.price}
+                                id = {productByIndex.id}
+                                key = {productByIndex.id}/>
+                    })}
                 </div>
             </section>
 
@@ -96,29 +103,22 @@ export function MainPage(){
             <section className={styles.catalog}>
                 <h2>КАТАЛОГ</h2>
                 <div className = {styles.catalogueList}>
-                    <div className = {styles.catalogItem}>
-                        <img src={IMAGES.Drone_DJIMini4Pro} alt="drone" className={styles.catalogItem}/>
-                        <h6 className = {styles.catalogItemTitle}>DJI Mini 4K</h6>
-                        <span className = {styles.catalogItemPrice}>
-                            <span className = {styles.oldPrice}>29 901 ₴</span>
-                            <span className = {styles.newPrice}>29 900 ₴</span>
-                        </span>
-                    </div>
-                    <div className = {styles.catalogItem}>
-                        <img src={IMAGES.drone2} alt="drone" className={styles.catalogImg}/>
-                        <h6 className = {styles.catalogItemTitle}>DJI Mini 4K</h6>
-                        <span className = {styles.catalogItemPrice}>29 900 ₴</span>
-                    </div>
-                    <div className = {styles.catalogItem}>
-                        <img src={IMAGES.drone3} alt="drone" className={styles.catalogImg}/>
-                        <h6 className = {styles.catalogItemTitle}>DJI Mini 4K</h6>
-                        <span className = {styles.catalogItemPrice}>29 900 ₴</span>
-                    </div>
-                    <div className = {styles.catalogItem}>
-                        <img src={IMAGES.drone4} alt="drone" className={styles.catalogImg}/>            
-                        <h6 className = {styles.catalogItemTitle}>DJI Mini 4K</h6>
-                        <span className = {styles.catalogItemPrice}>29 900 ₴</span>
-                    </div>
+                    {
+                    popProdLoad ? 
+                        <div>wait 1 sec pls</div> :
+                    popProdError ?
+                        <div>Oh dang, {newProdError}</div> 
+                    :
+                    preSetPopProdData.map((el) => {
+                        const productByIndex = products[el.index]
+                        console.log(productByIndex)
+                        return <CatalogueProductCard 
+                                image = {el.image} 
+                                title = {productByIndex.name}
+                                price = {productByIndex.price}
+                                priceWithDiscount = {productByIndex.price - productByIndex.discount}
+                                key = {productByIndex.id}/>
+                    })}
                 </div>
 
                 <button onClick = {() => {navigate("/catalog")}}>

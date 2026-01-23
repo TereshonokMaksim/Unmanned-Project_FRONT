@@ -1,0 +1,43 @@
+
+
+.catalogItem{
+	display: flex;
+	flex-direction: column;
+	padding: 14px;
+	position: relative;
+	justify-content: end;
+	align-items: start;
+	height: 363px;
+	width: 332px;
+}
+
+.catalogItem img{
+	position: absolute;
+	top: 0;
+	margin: auto;
+	height: 261px;
+	width: 261px;
+	object-fit: cover;
+	overflow: visible;
+}
+
+.catalogItem h6{
+	font-family: "GTWP Medium", sans-serif;
+	font-size: 24px;
+}
+
+.catalogItem .catalogItemPrice{
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	color: #0C122A;
+	font-family: "GTWP Medium", sans-serif;
+}
+
+.oldPrice{
+	text-decoration: line-through;
+}
+
+.newPrice{
+	color: #B62D11;
+}

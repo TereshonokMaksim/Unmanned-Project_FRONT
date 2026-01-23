@@ -1,0 +1,1 @@
+export { NewProductCard } from "./NewProductCard"
