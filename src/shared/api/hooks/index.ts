@@ -1,0 +1,1 @@
+export { UseGetSpecialProducts } from "./use-get-products"
