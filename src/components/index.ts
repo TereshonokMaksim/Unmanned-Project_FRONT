@@ -5,3 +5,5 @@ export { OrdersFooter } from "./OrdersFooter"
 
 export { NewProductCard } from "./newProductCard"
 export { CatalogueProductCard } from "./catalogueProductCard"
+export { CatalogueCardList } from "./catalogueCardList"
+export { NewCardList } from "./newCardList"

@@ -1,0 +1,7 @@
+
+.catalogueList{
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	justify-content: center;
+}

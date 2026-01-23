@@ -139,13 +139,6 @@
 	font-size: 44px;
 }
 
-.new .cards {
-	display: flex;
-	flex-direction: row;
-	gap: 40px;
-}
-
-
 /* CATALOGUE */
 
 .catalog{
@@ -161,12 +154,6 @@
 	font-size: 44px;
 }
 
-.catalogueList{
-	display: flex;
-	flex-direction: row;
-	gap: 24px;
-	justify-content: center;
-}
 
 .catalog button{
 	padding: 18px 40px;

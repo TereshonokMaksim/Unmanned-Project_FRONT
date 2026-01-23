@@ -14,21 +14,18 @@ export function UseGetSpecialProducts(newProducts: boolean, popularProducts: boo
     const [error, setError] = useState<string| null>(null)
 
     useEffect(() => {
-        console.log("asd")
         async function getProduct(){
-            console.log("WHAT IS THAT")
             try {
                 setIsLoad(true)
-                let link = `${API_URL}/products`
+                let link = `${API_URL}/products/suggestions`
                 if (popularProducts){
-                    link += `?popular=true`
+                    link += `?popular=true&page=0&perPage=4`
                 }
                 else if (newProducts){
-                    link += "?new=true"
+                    link += "?new=true&page=0&perPage=3"
                 }
-                const response = await fetch(link+"&take=4", {method: "GET"})
+                const response = await fetch(link, {method: "GET"})
                 const Nproducts = await response.json()
-                console.log(Nproducts   )
                 setNewProducts(Nproducts)
             } catch (error) {
                console.error(error)
