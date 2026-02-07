@@ -1,6 +1,7 @@
 import styles from "./main.module.css"
 import { useNavigate } from 'react-router-dom'
-import { IMAGES, VECTORS } from '../../shared'
+import { IMAGES } from '../../shared'
+import { Button, Title, Text } from "../../shared/ui"
 import { UseGetSpecialProducts } from "../../shared"
 import { NewCardList, CatalogueCardList } from "../../components"
 import { UseLoadPage } from "../../shared/api/hooks"
@@ -20,38 +21,37 @@ export function MainPage(){
                     <p>
                         Передові технології в одному місці. Обирай найкраще для найважливішого.
                     </p>
-                    <button onClick = {() => {navigate("/catalog/")}}>До каталогу</button>
+                    <Button onClick = {() => {navigate("/catalog/")}} variant = "primary" isBgOn = {true} isArrowShown = {false}>
+                        До каталогу
+                    </Button>
                 </div>
             </section>
 
             <section className={styles.about}>
-                <h2>ПРО НАС</h2>
-                <p className = {styles.aboutMainText}>
+                <Title>ПРО НАС</Title>
+                <Text variant = "primary">
                     Ми — команда, що об'єднує технології та надійність. <br/>
                     Пропонуємо дрони й тепловізори, перевірені у найскладніших умовах. <br/>
                     Обираємо тільки те, чому довіряємо самі.
-                </p>
-                <button onClick = {() => {navigate("/about")}}>
-                    <p>Детальніше</p>
-                    <VECTORS.ButtonArrowVector/>
-                </button>
+                </Text>
+                <Button onClick = {() => {navigate("/about")}} variant = "primary" isBgOn = {false} isArrowShown = {true}>
+                    Читати більше
+                </Button>
             </section>
 
             <section className={styles.new}>
-                <h2>НОВЕ НА САЙТІ</h2>
+                <Title>НОВЕ НА САЙТІ</Title>
                 <NewCardList error = {newProdError} load = {newProdLoad} products = {newProducts}/>
             </section>
 
 
             <section className={styles.catalog}>
-                <h2>КАТАЛОГ</h2>
+                <Title>КАТАЛОГ</Title>
                 <CatalogueCardList error = {popProdError} load = {popProdLoad} products = {popProducts}/>
-                <button onClick = {() => {navigate("/catalog")}} className = {styles.catalogButton}>
-                    <p>ДИВИТИСЬ ВСІ</p>
-                    <VECTORS.ButtonArrowVector/>
-                </button>
+                <Button onClick = {() => {navigate("/catalog")}} variant = "primary" isBgOn = {true} isArrowShown = {true}>
+                    ДИВИТИСЬ ВСІ
+                </Button>
             </section>
-
       </div>
 
     

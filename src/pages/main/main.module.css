@@ -10,7 +10,6 @@
 	width: 100%;
 	padding-top: 250px;
 	background-color: #CDD5DD;
-	/* clip-path: ellipse(61.5% 417.5px at 50% 115%); */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -56,21 +55,6 @@
 	font-size: 16px;
 }
 
-.absLandBlock button{
-	padding: 18px 40px;
-	background-color: #0C122A;
-	border-radius: 100px;
-	letter-spacing: 1px;
-	font-size: 14px;
-	color: white;
-	line-height: 100%;
-	font-family: "GTWP Bold", sans-serif;
-}
-
-.absLandBlock button:hover{
-	cursor: pointer;
-}
-
 .land img{
 	transform: rotate(11.29deg);
 	position: absolute;
@@ -90,47 +74,6 @@
 	gap: 24px;
 }
 
-.about h2{
-	color: #CDD5DD;
-	font-family: "GTWP Ultrabold", sans-serif;
-	font-size: 44px;
-}
-
-.about .aboutMainText{
-	color: #0C122A;
-	font-size: 16px;
-	text-align: center;
-}
-
-.about button{
-	padding: 18px 40px;
-	border: 1.5px solid #0C122A;
-	display: flex;
-	flex-direction: row;
-	gap: 16px;
-	background-color: transparent;
-	border-radius: 100px;
-	align-items: center;
-
-	height: fit-content;
-	width: fit-content;
-}
-
-.about button:hover{
-	cursor: pointer;
-}
-
-.about button p{
-	color: #0C122A;
-	font-family: "GTWP Bold", sans-serif;
-	font-size: 16px;
-}
-
-.about button svg{
-	width: 24px;
-	height: 24px;
-}
-
 /* NEW PART (ohno) */
 
 .new{
@@ -140,12 +83,6 @@
 	gap: 100px;
 }
 
-.new h2{
-	color: #CDD5DD;
-	font-family: "GTWP Ultrabold", sans-serif;
-	font-size: 44px;
-}
-
 /* CATALOGUE */
 
 .catalog{
@@ -153,43 +90,6 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 44px;
-}
-
-.catalog h2{
-	color: #CDD5DD;
-	font-family: "GTWP Ultrabold", sans-serif;
-	font-size: 44px;
-}
-
-
-.catalogButton{
-	padding: 18px 40px;
-	border: 1px solid white;
-	display: flex;
-	flex-direction: row;
-	gap: 16px;
-	background-color: #0C122A;
-	border-radius: 100px;
-	align-items: center;
-
-	height: fit-content;
-	width: fit-content;
-}
-
-.catalogButton p {
-	font-size: 14px;
-	font-family: "GTWP Bold";
-	color: white;
-}
-
-.catalogButton svg {
-	height: 24px;
-	width: 24x;
-	filter: invert(100%);
-}
-
-.catalogButton:hover{
-	cursor: pointer;
 }
 
 main{

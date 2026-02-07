@@ -4,14 +4,14 @@ import { VECTORS } from "../../shared"
 
 interface CatalogPaginationListProps {
     currentPage: number
-    totalAmount: number
+    totalAmount: number | undefined
     perPage: number
     setCurrentPage: (pageNum: number) => void
 }
 
 export function CatalogPaginationList(props: CatalogPaginationListProps){
     const {currentPage, totalAmount, perPage, setCurrentPage} = props
-    const totalPages = Math.ceil(totalAmount / perPage)
+    const totalPages = Math.ceil((totalAmount ? totalAmount : 0) / perPage)
     const LIMIT = 7
     let pagesRange = []
     if (currentPage < LIMIT / 2 + 1){

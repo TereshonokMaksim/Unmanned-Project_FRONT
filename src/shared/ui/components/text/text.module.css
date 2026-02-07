@@ -1,0 +1,15 @@
+.textGenericStyles{
+    font-family: "GTWP Regular", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    max-width: 100%;
+    text-wrap: wrap;
+}
+
+.primaryTextVariant{
+    color: rgba(12, 18, 42, 1);
+}
+
+.secondaryTextVariant{
+    color: rgba(61, 65, 85, 1);
+}

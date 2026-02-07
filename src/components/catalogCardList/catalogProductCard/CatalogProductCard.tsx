@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
-import { IMAGES, VECTORS } from "../../shared"
 import styles from "./catalog-product-card.module.css"
+import { CatalogButton } from "../../../shared/ui"
 
 interface CatalogueProductCardProps {
     image: string,
@@ -21,16 +21,15 @@ export function CatalogueProductCard(props: CatalogueProductCardProps){
                 <div className = {styles.catalogItemDesc}>
                     <h6 className = {styles.catalogItemTitle}>{title}</h6>
                     {priceWithDiscount < price ?
-                    <span className = {styles.catalogItemPrice}>
-                        <span className = {styles.oldPrice}>{price} $</span>
-                        <span className = {styles.newPrice}>{priceWithDiscount} $</span>
-                    </span>
+                        <span className = {styles.catalogItemPrice}>
+                            <span className = {styles.oldPrice}>{price} $</span>
+                            <span className = {styles.newPrice}>{priceWithDiscount} $</span>
+                        </span>
                     :
-                    <span className = {styles.catalogItemPrice}>{price} $</span>}
+                        <span className = {styles.catalogItemPrice}>{price} $</span>
+                    }
                 </div>
-                <button className={styles.catalogItemCatalog}>
-                    <VECTORS.CatalogVector/>
-                </button>
+                <CatalogButton className={styles.catalogItemCatalog}/>
             </div>
         </div>
     )

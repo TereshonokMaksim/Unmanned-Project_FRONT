@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom"
 import styles from "./product-page.module.css"
-import { act, useEffect } from "react"
+import { useEffect } from "react"
 import { UseGetProduct, UseGetSameProducts, UseLoadPage } from "../../shared/api/hooks"
-import { VECTORS } from "../../shared"
+import { Button, CatalogButton, Title } from "../../shared/ui"
 import { ProductBlockList, CatalogueCardList } from "../../components"
 
 
@@ -50,18 +50,20 @@ export function ProductPage(){
                                     </div>
                                 </div>
                                 <div className = {styles.absLandPart}>
-                                    <button className = {styles.catalogueIconAbs}>
-                                        <VECTORS.CatalogVector/>
-                                    </button>
-                                    <button className = {styles.absPartOrder}>ЗАМОВИТИ<VECTORS.ButtonArrowVector/></button>
+                                    <CatalogButton/>
+                                    <Button variant = "secondary" isBgOn = {true} isArrowShown = {true}>
+                                        ЗАМОВИТИ
+                                    </Button>
                                 </div>
                             </div>
                         </section>
                         {product && <ProductBlockList product = {product}/>}
                         <section className = {styles.sameProductsBlock}>
-                            <h2 className = {styles.sameProductsHeader}>СХОЖІ ТОВАРИ</h2>
+                            <Title>СХОЖІ ТОВАРИ</Title>
                             <CatalogueCardList products = {sameProducts} load = {sameProductsIsLoad} error = {sameProductsError}/>
-                            <button className = {styles.sameProductsButton} onClick = {() => {navigate("/catalog/")}}>ДИВИТИСЬ ВСІ<VECTORS.ButtonArrowVector/></button>
+                            <Button onClick = {() => {navigate("/catalog/")}} variant = "primary" isBgOn = {true} isArrowShown = {true}>
+                                ДИВИТИСЬ ВСІ
+                            </Button>
                         </section>
                     </div>
                 }

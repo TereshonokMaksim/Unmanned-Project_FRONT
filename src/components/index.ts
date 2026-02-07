@@ -4,12 +4,10 @@ export { Footer } from './footer'
 export { OrdersFooter } from "./OrdersFooter"
 
 export { NewProductCard } from "./newProductCard"
-export { CatalogueProductCard } from "./catalogProductCard"
-export { CatalogueCardList } from "./catalogCardList"
 export { NewCardList } from "./newCardList"
 
+export { CatalogueCardList } from "./catalogCardList"
 export { CatalogCategoryList } from "./catalogCategoryList"
 export { CatalogPaginationList } from "./catalogPaginationList"
 
-export { ProductMainInfoBlock } from "./productMainInfoBlock"
 export { ProductBlockList } from "./productBlockList"

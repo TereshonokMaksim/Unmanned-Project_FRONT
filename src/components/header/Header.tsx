@@ -7,12 +7,12 @@ export function Header() {
 
 	return <header className={styles.header}>
 			<nav className={styles.nav}>
-				<Link to={"/catalog"}>КАТАЛОГ</Link>
-				<Link to={"/about"}>ПРО НАС</Link>
-				<Link to={"/contacts"}>КОНТАКТИ</Link>
+				<Link to={"/catalog"} onClick={() => {window.scrollTo(0, 0)}}>КАТАЛОГ</Link>
+				<Link to={"/about"} onClick={() => {window.scrollTo(0, 0)}}>ПРО НАС</Link>
+				<Link to={"/contacts"} onClick={() => {window.scrollTo(0, 0)}}>КОНТАКТИ</Link>
 			</nav>
 
-			<div className={styles.logoBlock} onClick={() => navigate('/')}>
+			<div className={styles.logoBlock} onClick={() => {navigate('/'); window.scrollTo(0, 0)}} >
 				<img src={IMAGES.logo} alt="Logo" />
 			</div>
 

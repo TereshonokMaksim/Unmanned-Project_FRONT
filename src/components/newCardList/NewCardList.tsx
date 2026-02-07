@@ -7,7 +7,7 @@ import { IMAGES, Product, DEBUG } from "../../shared"
 interface NewCardListProps {
     load: boolean,
     error: string | null,
-    products: Product[]
+    products: Product[] | undefined
 }
 
 export function NewCardList(props: NewCardListProps){
@@ -39,7 +39,7 @@ export function NewCardList(props: NewCardListProps){
             {
             load ? 
                 <div><i>Завантаження...</i></div> :
-            error ?
+            (error || !products) ?
                 <div style={{color: "red"}}>Не вдалося завантажити товари</div>
             :
             preSetProductData.map((el) => {

@@ -6,7 +6,6 @@ interface CharacteristicBlockProps{
     detailDataBlock: ProductDetailData
 }
 
-
 export function CharacteristicBlock(props: CharacteristicBlockProps){
     const {detailDataBlock} = props
     const blocks = []

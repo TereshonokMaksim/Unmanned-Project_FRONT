@@ -1,5 +1,6 @@
-import { ProductMainBlockInter } from "../../shared/types"
-import { CharacteristicBlock } from "./characteristicBlock"
+import { ProductMainBlockInter } from "../../../shared/types"
+import { CharacteristicBlock } from "../characteristicBlock"
+import { Title, Text } from "../../../shared/ui"
 import styles from "./product-main-info-block.module.css"
 
 
@@ -14,7 +15,7 @@ export function ProductMainInfoBlock(props: ProductMainBlockProps){
         <div className = {`${styles.productMainBlock} ${styles[directionClassName]}`}>
             <div className = {styles.auxiliaryMainBlockContent}>
                 <div className = {styles.productBlockTextInfo}>
-                    <h2 className = {styles.productBlockTitle}>{block.title}</h2>
+                    <Title className = {styles.productBlockTitle} variant = "secondary">{block.title}</Title>
                     <p className = {styles.productBlockDescription}>{block.description}</p>
                 </div>
                 {block.productDetailDatas.length > 0 && (

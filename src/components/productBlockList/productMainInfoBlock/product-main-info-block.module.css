@@ -42,15 +42,7 @@
 }
 
 .productBlockTitle{
-    font-size: 44px;
-    color: rgba(12, 18, 42, 1);
-    width: 100%;
-    text-wrap: wrap;
     text-align: start;
-}
-
-.productAligningcolumn .productBlockTitle{
-    text-align: center;
 }
 
 .productBlockDescription{
