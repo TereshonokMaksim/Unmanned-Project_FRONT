@@ -1,5 +1,5 @@
 import styles from "./catalog-pagination-list.module.css"
-import { VECTORS } from "../../shared"
+import { VECTORS } from "../../shared/ui"
 
 
 interface CatalogPaginationListProps {
@@ -25,11 +25,11 @@ export function CatalogPaginationList(props: CatalogPaginationListProps){
     }
     return (
         <div className = {styles.catPageList}>
-            <VECTORS.toStart onClick={() => {setCurrentPage(0)}}/>
+            <VECTORS.ToStart onClick={() => {setCurrentPage(0)}}/>
             {pagesRange.map((num) => {
-                return <button className = {`${styles.pageNumButton} ${num == currentPage ? styles.activePageNum : false}`} onClick = {() => {if (currentPage != num) {setCurrentPage(num-1)}}} key = {num}>{num}</button>
+                return <button className = {`${styles.pageNumButton} ${num === currentPage ? styles.activePageNum : false}`} onClick = {() => {if (currentPage !== num) {setCurrentPage(num-1)}}} key = {num}>{num}</button>
             })}
-            <VECTORS.toEnd onClick={() => {setCurrentPage(totalPages-1)}}/>
+            <VECTORS.ToEnd onClick={() => {setCurrentPage(totalPages-1)}}/>
         </div>
     )
 }

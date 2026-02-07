@@ -1,4 +1,4 @@
-import { IMAGES, Product } from "../../shared";
+import { Product } from "../../shared/types"
 import { CatalogueProductCard } from "./catalogProductCard";
 import styles from "./catalogue-card-list.module.css"
 
@@ -24,7 +24,7 @@ export function CatalogueCardList(props: CatalogueCardListProps){
                         image = {el.media} 
                         title = {el.name}
                         price = {el.price}
-                        priceWithDiscount = {el.price - el.discount}
+                        discount = {el.discount}
                         id = {el.id}
                         key = {el.id}/>
             })}

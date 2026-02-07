@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
 import { Category } from "../../../types"
 import { UseFetch } from "../generic"
+
 
 interface UseGetCategoriesReturn {
     categories: Category[] | undefined

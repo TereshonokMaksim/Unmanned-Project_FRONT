@@ -1,7 +1,7 @@
 import styles from './main.module.css'
-import { main } from './main.types'
+import { MainProps } from './main.types'
 
-export function Main(props: main) {
+export function Main(props: MainProps) {
     const {children} = props
     return (
 		<main className={styles.main}>

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import styles from "./not-found.module.css"
-import { UseLoadPage } from "../../shared/api/hooks"    
+import { UseLoadPage } from "../../shared/hooks"    
 
 
 // nobody is going to notice what im doing in my work time

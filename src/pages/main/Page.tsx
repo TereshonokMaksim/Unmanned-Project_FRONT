@@ -1,10 +1,9 @@
 import styles from "./main.module.css"
 import { useNavigate } from 'react-router-dom'
-import { IMAGES } from '../../shared'
+import { IMAGES } from '../../shared/ui'
 import { Button, Title, Text } from "../../shared/ui"
-import { UseGetSpecialProducts } from "../../shared"
+import { UseGetSpecialProducts, UseLoadPage } from "../../shared/hooks"
 import { NewCardList, CatalogueCardList } from "../../components"
-import { UseLoadPage } from "../../shared/api/hooks"
 
 export function MainPage(){
     const {products: newProducts, isLoad: newProdLoad, error: newProdError} = UseGetSpecialProducts(true, false)

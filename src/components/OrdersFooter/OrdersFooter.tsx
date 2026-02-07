@@ -1,5 +1,5 @@
 import styles from "./orders-footer.module.css"
-import { IMAGES } from "../../shared"
+import { IMAGES } from "../../shared/ui"
 
 
 export function OrdersFooter(){

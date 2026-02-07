@@ -1,6 +1,6 @@
 import styles from "./about.module.css"
-import { IMAGES } from "../../shared"
-import { UseLoadPage } from "../../shared/api/hooks"
+import { IMAGES } from "../../shared/ui"
+import { UseLoadPage } from "../../shared/hooks"
 import { Title, Text } from "../../shared/ui"
 
 

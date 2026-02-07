@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { VECTORS } from "../../shared"
+import { VECTORS } from "../../../shared/ui"
 import styles from "./new-product-card.module.css"
 
 export interface NewProductProps {

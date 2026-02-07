@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom"
 import styles from "./product-page.module.css"
 import { useEffect } from "react"
-import { UseGetProduct, UseGetSameProducts, UseLoadPage } from "../../shared/api/hooks"
-import { Button, CatalogButton, Title } from "../../shared/ui"
+import { UseGetProduct, UseGetSameProducts, UseLoadPage } from "../../shared/hooks"
+import { Button, CatalogButton, Price, Title } from "../../shared/ui"
 import { ProductBlockList, CatalogueCardList } from "../../components"
 
 
@@ -19,6 +19,7 @@ export function ProductPage(){
         }
         updateProduct()
         updateSameProducts()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [actualProductId])
     return (
             <div className = {styles.page}>
@@ -39,12 +40,7 @@ export function ProductPage(){
                                     <img src={product?.media} alt="WHAT" className = {styles.landSmallImg} />
                                     <div className = {styles.descAbsPart}>
                                         <h6 className = {styles.titleAbsPart}>{product?.name}</h6>
-                                        {product?.discount == 0 ?
-                                            <p className = {styles.priceAbsPart}>{product.price} $</p> :
-                                        (<p className = {styles.priceAbsPart}>
-                                            <span className = {styles.oldPriceOverlineAbs}>{product?.price} $</span>
-                                            <span className = {styles.newPriceAbsPart}>{product!.price - product!.discount} $</span>
-                                        </p>)}
+                                        <Price discount = {product!.discount} price = {product!.price}/>
                                     </div>
                                     <div className = {styles.buttonsAbsPart}>
                                     </div>

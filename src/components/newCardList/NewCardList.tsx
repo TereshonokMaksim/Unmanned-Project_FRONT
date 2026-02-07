@@ -1,6 +1,7 @@
 import styles from "./new-card-list.module.css"
-import { NewProductCard } from "../newProductCard"
-import { IMAGES, Product, DEBUG } from "../../shared"
+import { NewProductCard } from "./newProductCard"
+import { IMAGES } from "../../shared/ui"
+import { Product } from "../../shared/types"
 
 
 
@@ -17,19 +18,16 @@ export function NewCardList(props: NewCardListProps){
         {
             "gcolor": "#F5BE4F", 
             "bgImage": IMAGES.desertBG,
-            "droneImage": IMAGES.Drone_DJIMini4K,
             "index": 0
         },
         {
             "gcolor": "#1A271B", 
             "bgImage": IMAGES.forestBG,
-            "droneImage": IMAGES.Drone_DJIMini4Pro,
             "index": 1
         },
         {
             "gcolor": "#4F94A4", 
             "bgImage": IMAGES.lakeBG,
-            "droneImage": IMAGES.Drone_DJIMini4K,
             "index": 2
         }
     ]
@@ -47,7 +45,7 @@ export function NewCardList(props: NewCardListProps){
                 return <NewProductCard 
                         bgImage = {el.bgImage} 
                         gcolor = {el.gcolor} 
-                        productImage = {DEBUG ? el.droneImage : productByIndex.media} 
+                        productImage = {productByIndex.media} 
                         productTitle = {productByIndex.name}
                         productDescription = {productByIndex.description}
                         productPrice = {productByIndex.price}

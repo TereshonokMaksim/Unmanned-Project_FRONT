@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../../api-url";
+import { API_URL } from "../api-url";
 import { GenericHookOutput } from "./generic-get-hook.types";
 
 
@@ -25,6 +25,7 @@ export function UseFetch<dataType>(linkEnding: string, defaultValue?: dataType):
     }
     useEffect(() => {
         getData()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return [getData, {data, isLoad, error}]
 }

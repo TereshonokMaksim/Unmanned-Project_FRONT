@@ -10,9 +10,6 @@
 	width: 100%;
 	padding-top: 250px;
 	background-color: #CDD5DD;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
 	height: 851px;
 	position: relative;
 }
@@ -67,28 +64,19 @@
 
 /* ABOUT PART (YEEEE) */
 
-.about{
+section{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.about{
 	gap: 24px;
 }
-
-/* NEW PART (ohno) */
-
 .new{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	gap: 100px;
 }
-
-/* CATALOGUE */
-
 .catalog{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	gap: 44px;
 }
 

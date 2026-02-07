@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom"
 import styles from "./catalog-product-card.module.css"
-import { CatalogButton } from "../../../shared/ui"
+import { CatalogButton, Price } from "../../../shared/ui"
 
 interface CatalogueProductCardProps {
     image: string,
     title: string,
     price: number,
-    priceWithDiscount: number,
+    discount: number,
     id: number
 }
 
 export function CatalogueProductCard(props: CatalogueProductCardProps){
-    const {image, title, price, priceWithDiscount, id} = props
+    const {image, title, price, discount, id} = props
     const navigate = useNavigate()
 
     return (
@@ -20,14 +20,7 @@ export function CatalogueProductCard(props: CatalogueProductCardProps){
             <div className = {styles.catalogItemBottom}>
                 <div className = {styles.catalogItemDesc}>
                     <h6 className = {styles.catalogItemTitle}>{title}</h6>
-                    {priceWithDiscount < price ?
-                        <span className = {styles.catalogItemPrice}>
-                            <span className = {styles.oldPrice}>{price} $</span>
-                            <span className = {styles.newPrice}>{priceWithDiscount} $</span>
-                        </span>
-                    :
-                        <span className = {styles.catalogItemPrice}>{price} $</span>
-                    }
+                    <Price discount = {discount} price = {price}/>
                 </div>
                 <CatalogButton className={styles.catalogItemCatalog}/>
             </div>
