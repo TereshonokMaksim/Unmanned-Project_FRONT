@@ -1,5 +1,5 @@
 import { ProductFull } from "../../shared/types"
-import { ProductMainInfoBlock } from "../productMainInfoBlock"
+import { ProductMainInfoBlock } from "./productMainInfoBlock"
 import styles from "./product-block-list.module.css"
 
 

@@ -1,6 +1,3 @@
-// Пример файла в типах
-
-
 export interface Product {
     name: string
     id: number

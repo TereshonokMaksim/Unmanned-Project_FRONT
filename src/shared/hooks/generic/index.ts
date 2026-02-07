@@ -1,0 +1,1 @@
+export { UseLoadPage } from "./use-load-page"

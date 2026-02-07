@@ -1,0 +1,1 @@
+export { UseFetch } from "./generic-get-hook"

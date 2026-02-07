@@ -1,1 +1,0 @@
-export { UseGetSpecialProducts } from "./hooks"

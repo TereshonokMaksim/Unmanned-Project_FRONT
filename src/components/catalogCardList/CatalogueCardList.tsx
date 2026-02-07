@@ -1,12 +1,12 @@
-import { IMAGES, Product } from "../../shared";
-import { CatalogueProductCard } from "../catalogProductCard";
+import { Product } from "../../shared/types"
+import { CatalogueProductCard } from "./catalogProductCard";
 import styles from "./catalogue-card-list.module.css"
 
 
 interface CatalogueCardListProps {
     load: boolean,
     error: string | null,
-    products: Product[]
+    products: Product[] | undefined
 }
 
 export function CatalogueCardList(props: CatalogueCardListProps){
@@ -16,7 +16,7 @@ export function CatalogueCardList(props: CatalogueCardListProps){
             {
             load ? 
                 <div><i>Завантаження...</i></div> :
-            error ?
+            (error || !products) ?
                 <div style={{color: "red"}}>Не вдалося завантажити товари</div> 
             :
             products.map((el) => {
@@ -24,7 +24,7 @@ export function CatalogueCardList(props: CatalogueCardListProps){
                         image = {el.media} 
                         title = {el.name}
                         price = {el.price}
-                        priceWithDiscount = {el.price - el.discount}
+                        discount = {el.discount}
                         id = {el.id}
                         key = {el.id}/>
             })}

@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
 
-export interface main{
+export interface MainProps{
     children?: ReactNode
 }

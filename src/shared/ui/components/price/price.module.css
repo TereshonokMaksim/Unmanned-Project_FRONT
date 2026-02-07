@@ -1,0 +1,27 @@
+.priceBlockGeneric{
+    width: fit-content;
+    height: fit-content;
+    font-family: "GTWP Medium", sans-serif;
+    font-size: 14px;
+}
+
+.priceCombination{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.priceGeneric{
+    color: rgba(12, 18, 42, 1);
+}
+
+.oldPriceOverline{
+    color: rgba(12, 18, 42, 1);
+    text-decoration: line-through;
+}
+
+.newPrice{
+    color: rgba(182, 45, 17, 1);
+}

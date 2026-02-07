@@ -1,0 +1,17 @@
+.catalogButtonContainer{
+    padding: 14px;
+    border: 1.5px solid rgba(12, 18, 42, 1);
+    border-radius: 100px;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+}
+
+.catalogButtonContainer:hover{
+    cursor: pointer;
+}
+
+.catalogButtonSVG{
+    width: 16px;
+    height: 16px;
+}
