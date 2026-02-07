@@ -2,6 +2,8 @@
 .catalogueList{
 	display: flex;
 	flex-direction: row;
-	gap: 24px;
+	gap: 24px 0;
 	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
 }

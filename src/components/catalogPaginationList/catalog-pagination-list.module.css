@@ -1,0 +1,48 @@
+.catPageList{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 0px 6px;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+}
+
+.catPageList svg{
+    color: #0C122A;
+    width: 40px;
+    height: 40px;
+    padding: 14px;
+    user-select: none;
+}
+
+.catPageList svg:hover{
+    cursor: pointer;
+}
+
+.pageNumButton{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 14px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: default;
+    user-select: none;
+}
+
+.activePageNum{
+    background-color: #F4F4F4;
+}
+
+.pageNumButton:hover{
+    cursor: pointer;
+}
+
+.activePageNum:hover{
+    cursor: default;
+}

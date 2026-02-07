@@ -1,13 +1,15 @@
 import styles from "./main.module.css"
 import { useNavigate } from 'react-router-dom'
-import { IMAGES, Product, VECTORS } from '../../shared'
+import { IMAGES, VECTORS } from '../../shared'
 import { UseGetSpecialProducts } from "../../shared"
 import { NewCardList, CatalogueCardList } from "../../components"
+import { UseLoadPage } from "../../shared/api/hooks"
 
 export function MainPage(){
     const {products: newProducts, isLoad: newProdLoad, error: newProdError} = UseGetSpecialProducts(true, false)
     const {products: popProducts, isLoad: popProdLoad, error: popProdError} = UseGetSpecialProducts(false, true)
     const navigate = useNavigate()
+    UseLoadPage()   
     
     return (
         <div className={styles["page"]}>
