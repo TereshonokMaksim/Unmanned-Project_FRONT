@@ -1,0 +1,1 @@
+export { ProductMainInfoBlock } from "./ProductMainInfoBlock"

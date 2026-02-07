@@ -3,27 +3,25 @@ import { Product } from "../../types"
 import { API_URL } from "../api-url"
 import { UseGetProductsGeneral } from "./product-types"
 
-export function UseGetProducts(page?: number, perPage?: number, categoryId?: number): UseGetProductsGeneral{
+
+export function UseGetSpecialProducts(newProducts: boolean, popularProducts: boolean): UseGetProductsGeneral{
     const [products, setNewProducts] = useState<Product[]>([])
     const [isLoad, setIsLoad] = useState<boolean>(true)
     const [error, setError] = useState<string| null>(null)
-    // некрасиво? Абсолютно
-    async function getProducts () {
+
+    async function getProduct(){
         try {
             setIsLoad(true)
-            if (!perPage){
-                perPage = 20
+            let link = `${API_URL}/products/suggestions`
+            if (popularProducts){
+                link += `?popular=true&page=0&perPage=4`
             }
-            if (!page){
-                page = 0
-            }
-            let link = `${API_URL}/products?page=${page}&perPage=${perPage}`
-            if (categoryId || categoryId === 0){
-                link += `&productCategory=${categoryId}`
+            else if (newProducts){
+                link += "?new=true&page=0&perPage=3"
             }
             const response = await fetch(link, {method: "GET"})
-            const allProducts = await response.json()
-            setNewProducts(allProducts)
+            const Nproducts = await response.json()
+            setNewProducts(Nproducts)
         } catch (error) {
             console.error(error)
             if (error instanceof Error) {
@@ -33,9 +31,8 @@ export function UseGetProducts(page?: number, perPage?: number, categoryId?: num
             setIsLoad(false)
         }
     }
-
     useEffect(() => {
-        getProducts()
+        getProduct()
     }, [])
-    return { products, isLoad, error, update: getProducts }
+    return { products, isLoad, error, update: getProduct}
 }

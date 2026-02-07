@@ -1,0 +1,7 @@
+.productBlockList{
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    align-items: center;
+}

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import styles from "./not-found.module.css"
+import { UseLoadPage } from "../../shared/api/hooks"
 
 
 // nobody is going to notice what im doing in my work time
@@ -15,6 +16,7 @@ const errorDescriptions = [
 
 export function NotFoundPage(){
     const navigator = useNavigate()
+    UseLoadPage()
     let text = errorDescriptions[Math.round(Math.random() * (errorDescriptions.length - 1))]
     return (
         <div className = {styles.page}>
@@ -22,7 +24,7 @@ export function NotFoundPage(){
                 <h1>404</h1>
                 <p>{text}</p>
             </div>
-            <button onClick={() => {navigator("/")}}>
+            <button onClick={() => {navigator("/")}} className = {styles.notFoundButton}>
                 <p>НА ГОЛОВНУ</p>
             </button>
         </div>

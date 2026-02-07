@@ -1,0 +1,29 @@
+.catList{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.activeCategory, .inactiveCategory{
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    border: 1px solid #E7E7EA;
+    color: #0C122A;
+    font-size: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.inactiveCategory:hover{
+    cursor: pointer;
+}
+
+.activeCategory{
+    background-color: #F4F4F4;
+}

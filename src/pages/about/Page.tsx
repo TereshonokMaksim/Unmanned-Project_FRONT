@@ -1,8 +1,10 @@
 import styles from "./about.module.css"
 import { IMAGES } from "../../shared"
+import { UseLoadPage } from "../../shared/api/hooks"
 
 
 export function AboutPage(){
+    UseLoadPage()
     return (
         <div className={styles.page}>
             <section className={styles.aboutSection}>
