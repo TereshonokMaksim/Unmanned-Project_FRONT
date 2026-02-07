@@ -22,7 +22,6 @@ export function UseGetProductsAmount(categoryId?: number): UseGetProductsAmountR
             }
             const response = await fetch(link, {method: "GET"})
             const allProducts = await response.json()
-            console.log(allProducts)
             setAmount(allProducts)
         } catch (error) {
         console.error(error)

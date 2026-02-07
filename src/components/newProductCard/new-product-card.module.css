@@ -99,6 +99,10 @@
 	width: fit-content;
 }
 
+.dataCard button:hover{
+	cursor: pointer;
+}
+
 .dataCard button p {
 	font-size: 14px;
 	font-family: "GTWP Medium";

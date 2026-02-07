@@ -10,14 +10,16 @@ export function ProductPage(){
     const params = useParams<{id: string}>()
     const navigate = useNavigate()
     const actualProductId = Number(params.id)
+    const {product, error, isLoad, update: updateProduct} = UseGetProduct(actualProductId)
+    const {products: sameProducts, error: sameProductsError, isLoad: sameProductsIsLoad, update: updateSameProducts} = UseGetSameProducts(actualProductId)
     UseLoadPage()
     useEffect(() => {
         if (Number.isNaN(actualProductId)){
             navigate("/")
         }
+        updateProduct()
+        updateSameProducts()
     }, [actualProductId])
-    const {product, error, isLoad} = UseGetProduct(actualProductId)
-    const {products: sameProducts, error: sameProductsError, isLoad: sameProductsIsLoad} = UseGetSameProducts(actualProductId)
     return (
             <div className = {styles.page}>
                 {isLoad ? 

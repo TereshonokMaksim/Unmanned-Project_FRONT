@@ -20,7 +20,7 @@ export function MainPage(){
                     <p>
                         Передові технології в одному місці. Обирай найкраще для найважливішого.
                     </p>
-                    <button>До каталогу</button>
+                    <button onClick = {() => {navigate("/catalog/")}}>До каталогу</button>
                 </div>
             </section>
 
@@ -46,7 +46,7 @@ export function MainPage(){
             <section className={styles.catalog}>
                 <h2>КАТАЛОГ</h2>
                 <CatalogueCardList error = {popProdError} load = {popProdLoad} products = {popProducts}/>
-                <button onClick = {() => {navigate("/catalog")}}>
+                <button onClick = {() => {navigate("/catalog")}} className = {styles.catalogButton}>
                     <p>ДИВИТИСЬ ВСІ</p>
                     <VECTORS.ButtonArrowVector/>
                 </button>

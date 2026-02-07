@@ -6,7 +6,7 @@ import { use, useEffect, useState } from "react"
 
 
 export function CatalogPage(){
-    UseLoadPage()
+    const goBack = UseLoadPage()
     const [pageNum, setPageNum]= useState(0)
     const [activeCategory, setActiveCategory] = useState(-1)
     const perPage = 20
@@ -16,6 +16,7 @@ export function CatalogPage(){
     useEffect(() => {
         amountUpdate()
         prodUpdate()
+        goBack()
     }, [pageNum, activeCategory])
     useEffect(() => {
         setPageNum(0)

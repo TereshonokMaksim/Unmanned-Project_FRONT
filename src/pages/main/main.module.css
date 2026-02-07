@@ -67,6 +67,10 @@
 	font-family: "GTWP Bold", sans-serif;
 }
 
+.absLandBlock button:hover{
+	cursor: pointer;
+}
+
 .land img{
 	transform: rotate(11.29deg);
 	position: absolute;
@@ -110,7 +114,10 @@
 
 	height: fit-content;
 	width: fit-content;
+}
 
+.about button:hover{
+	cursor: pointer;
 }
 
 .about button p{
@@ -155,7 +162,7 @@
 }
 
 
-.catalog button{
+.catalogButton{
 	padding: 18px 40px;
 	border: 1px solid white;
 	display: flex;
@@ -169,16 +176,20 @@
 	width: fit-content;
 }
 
-.catalog button p {
+.catalogButton p {
 	font-size: 14px;
 	font-family: "GTWP Bold";
 	color: white;
 }
 
-.catalog button svg {
+.catalogButton svg {
 	height: 24px;
 	width: 24x;
 	filter: invert(100%);
+}
+
+.catalogButton:hover{
+	cursor: pointer;
 }
 
 main{
