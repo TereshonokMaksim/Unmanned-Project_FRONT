@@ -1,0 +1,1 @@
+export { regModal } from './regModal';
