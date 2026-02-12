@@ -1,0 +1,108 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.activeTab {
+    color: #000000;
+}
+
+.inactiveTab {
+    color: #d1d5db;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #000000;
+}
+
+.forgotBtn {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.cancelBtn {
+    flex: 1;
+    border: 1px solid #1f2937;
+    background: none;
+    border-radius: 9999px;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.submitBtn {
+    flex: 1;
+    background-color: #0b1221;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+}
