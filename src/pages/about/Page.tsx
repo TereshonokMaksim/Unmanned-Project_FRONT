@@ -1,14 +1,59 @@
+import { useState } from "react"
+
+import {
+  returnPassword,
+  NewPasswordModal,
+  PasswordSuccessModal,
+} from "../../components";
 import styles from "./about.module.css"
 import { IMAGES } from "../../shared"
 import { UseLoadPage } from "../../shared/api/hooks"
+import ReturnPassword from "../../components/returnPassword";
 
 
 export function AboutPage(){
+//     const [returnOpen, setReturnOpen] = useState(false);
+//     const [newPassOpen, setNewPassOpen] = useState(false);
+//     const [successOpen, setSuccessOpen] = useState(false);
+
+  
+//     const handleReturnSubmit = (email: string) => {
+//         console.log("Email збережено:", email);
+//         setReturnOpen(false);
+//         setNewPassOpen(true);   
+//   };
+//     const handleSavePassword = (password: string) => {
+//         console.log("Новий пароль:", password);
+
+//         setNewPassOpen(false);
+//         setSuccessOpen(true);
+//   };
     UseLoadPage()
     return (
         <div className={styles.page}>
             <section className={styles.aboutSection}>
                 <div className = {styles.aboutTextPart}>
+                    {/* <button onClick={() => setReturnOpen(true)}>
+                            Відновити пароль
+                    </button>
+
+                    <ReturnPassword
+                        isOpen={returnOpen}
+                        onClose={() => setReturnOpen(false)}
+                        onSubmit={handleReturnSubmit}
+                    />
+
+                    <NewPasswordModal
+                        isOpen={newPassOpen}
+                        onClose={() => setNewPassOpen(false)}
+                        onSave={handleSavePassword}
+                    />
+
+                    <PasswordSuccessModal
+                        isOpen={successOpen}
+                        onClose={() => setSuccessOpen(false)}
+                        onLogin={() => console.log("Redirect to login")}
+                    /> */}
                     <h1>ПРО НАС</h1>
                     <p>
                         Ми — команда, яка об'єднана спільною метою: зробити передові технології доступними для кожного, хто потребує точності, безпеки та інновацій. <br/>
@@ -22,6 +67,7 @@ export function AboutPage(){
             </section>
 
             <section className={styles.missionSection}>
+
                 <div className={styles.missionText}>
                     <h2>НАША МІСІЯ</h2>
                     <p>
