@@ -13,3 +13,6 @@ export { CatalogPaginationList } from "./catalogPaginationList"
 
 export { ProductMainInfoBlock } from "./productMainInfoBlock"
 export { ProductBlockList } from "./productBlockList"
+export { default as NewPasswordModal } from "./NewPasswordModal";
+export { default as PasswordSuccessModal } from "./PasswordSuccessModal";
+export { default as returnPassword} from "./returnPassword"
