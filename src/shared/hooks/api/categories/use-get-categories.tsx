@@ -1,5 +1,5 @@
 import { Category } from "../../../types"
-import { UseFetch } from "../generic"
+import { UseFetch } from "../genericGetHook"
 
 
 interface UseGetCategoriesReturn {

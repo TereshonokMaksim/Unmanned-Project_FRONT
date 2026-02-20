@@ -8,10 +8,10 @@ export function Price(props: PriceProps){
         <p className = {`${styles.priceBlockGeneric} ${className}`}>
             {discount == 0 ?
                 <span className = {styles.priceGeneric}>{price} $</span> :
-            <p className = {styles.priceCombination}>
+            <span className = {styles.priceCombination}>
                 <span className = {styles.oldPriceOverline}>{price} $</span>
                 <span className = {styles.newPrice}>{price - discount} $</span>
-            </p>}
+            </span>}
         </p>
     )
 }

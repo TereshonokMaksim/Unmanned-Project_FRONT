@@ -6,6 +6,7 @@ import {ReactComponent as ProfilesVector} from '../../assets/vectors/profiles.sv
 import {ReactComponent as ButtonArrowVector} from '../../assets/vectors/buttonArrow.svg'
 import {ReactComponent as ToStart} from '../../assets/vectors/toStart.svg'
 import {ReactComponent as ToEnd} from '../../assets/vectors/toEnd.svg'
+import {ReactComponent as ModalCloseButton} from "../../assets/vectors/modalCloseButton.svg"
 
 import {ReactComponent as ShopVector} from '../../assets/vectors/shop.svg'
 import {ReactComponent as CatalogVector} from "../../assets/vectors/catalog.svg"
@@ -17,5 +18,6 @@ export const VECTORS = {
     ButtonArrowVector,
     ToStart,
     ToEnd,
-    CatalogVector
+    CatalogVector,
+    ModalCloseButton
 } 

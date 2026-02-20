@@ -1,0 +1,18 @@
+.feedbackForm{
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 668px;
+}
+
+.innerFeedbackForm{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.formHeaderFeedback{
+    color: rgba(12, 18, 42, 1);
+    font-size: 24px;
+}

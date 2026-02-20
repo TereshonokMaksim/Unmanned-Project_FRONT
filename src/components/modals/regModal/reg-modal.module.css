@@ -1,0 +1,58 @@
+.regModal{
+    width: 447px;
+}
+
+.regFormHeader{
+    font-family: "GTWP Medium";
+    color: rgba(12, 18, 42, 1);
+    font-size: 20px;   
+}
+
+.regFormHeader span{
+    color: rgba(158, 160, 170, 1);
+}
+
+.regFormHeader:hover{
+    cursor: pointer;
+}
+
+.regFormInner{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.regModalBottom{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.regModalButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.regFormDoc{
+    color: rgba(158, 160, 170, 1);
+    text-align: left;
+    font-size: 14px;
+}
+
+.regFormWarn{
+    color: rgba(182, 45, 17, 1);
+}
+
+.regFormGoLogin{
+    color: rgba(158, 160, 170, 1);
+    text-align: left;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.regFormGoLogin:hover{
+    cursor: pointer;
+}

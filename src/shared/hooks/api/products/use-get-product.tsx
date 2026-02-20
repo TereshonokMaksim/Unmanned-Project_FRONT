@@ -1,5 +1,5 @@
 import { ProductFull } from "../../../types"
-import { UseFetch } from "../generic"
+import { UseFetch } from "../genericGetHook"
 
 
 interface UseGetProductReturn {

@@ -1,4 +1,4 @@
-import { UseFetch } from "../generic"
+import { UseFetch } from "../genericGetHook"
 
 
 export interface UseGetProductsAmountReturn {

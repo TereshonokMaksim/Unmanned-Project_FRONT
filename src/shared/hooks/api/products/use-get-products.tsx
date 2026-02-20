@@ -1,5 +1,5 @@
 import { Product } from "../../../types"
-import { UseFetch } from "../generic"
+import { UseFetch } from "../genericGetHook"
 import { UseGetProductsGeneral } from "./product-types"
 
 

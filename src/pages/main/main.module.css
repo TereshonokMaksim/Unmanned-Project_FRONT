@@ -6,6 +6,14 @@
 	gap: 100px;
 }
 
+.absLandBlock p{
+	text-align: left;
+}
+
+p{
+	text-align: center;
+}
+
 .land{
 	width: 100%;
 	padding-top: 250px;
