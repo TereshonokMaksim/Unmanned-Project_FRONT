@@ -1,5 +1,6 @@
-export { MainPage } from "./main"
-export { AboutPage } from "./about"
-export { CatalogPage } from "./catalog"
-export { NotFoundPage } from "./not-found"
-export { ProductPage } from "./product"
+export {MainPage} from "./main";
+export {AboutPage} from "./about";
+export {CatalogPage} from "./catalog";
+export {NotFoundPage} from "./not-found";
+export {ProductPage} from "./product";
+export {ContactsPage} from "./contacts";

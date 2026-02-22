@@ -1,5 +1,5 @@
 export type { Product } from "./product"
-export type { User } from "./user"
+export type { SafeUser } from "./user"
 export type { Order } from "./order"
 export type { Category } from "./category"
 export type { ProductFull, ProductMainBlockInter, ProductDetailData } from "./product-full"

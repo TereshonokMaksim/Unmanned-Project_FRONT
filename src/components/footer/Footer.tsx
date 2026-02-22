@@ -1,5 +1,5 @@
 import styles from './footer.module.css'
-import { IMAGES } from '../../shared'
+import { IMAGES } from '../../shared/ui'
 import { Link } from 'react-router-dom'
 
 export function Footer() {

@@ -1,0 +1,1 @@
+export { UseAuthFetch } from "./generic-get-auth-hook"

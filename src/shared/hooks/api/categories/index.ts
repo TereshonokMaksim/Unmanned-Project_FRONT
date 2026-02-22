@@ -1,0 +1,1 @@
+export { UseGetCategories } from "./use-get-categories"

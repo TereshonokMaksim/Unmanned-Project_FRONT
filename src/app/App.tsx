@@ -1,7 +1,12 @@
 import { AppRoutes } from "./AppRoutes"
+import { UserContextProvider } from "../context"
 
 
 export function App() {
-    return <AppRoutes/>
+    return (
+        <UserContextProvider>
+            <AppRoutes/>
+        </UserContextProvider>
+    )
 }
 

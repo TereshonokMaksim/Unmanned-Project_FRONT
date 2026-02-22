@@ -1,6 +1,7 @@
 import styles from "./about.module.css"
-import { IMAGES } from "../../shared"
-import { UseLoadPage } from "../../shared/api/hooks"
+import { IMAGES } from "../../shared/ui"
+import { UseLoadPage } from "../../shared/hooks"
+import { Title, Text } from "../../shared/ui"
 
 
 export function AboutPage(){
@@ -9,11 +10,11 @@ export function AboutPage(){
         <div className={styles.page}>
             <section className={styles.aboutSection}>
                 <div className = {styles.aboutTextPart}>
-                    <h1>ПРО НАС</h1>
-                    <p>
+                    <Title>ПРО НАС</Title>
+                    <Text variant = "secondary">
                         Ми — команда, яка об'єднана спільною метою: зробити передові технології доступними для кожного, хто потребує точності, безпеки та інновацій. <br/>
                         З 2022 року ми спеціалізуємось на постачанні дронів і тепловізорів для професійного, цивільного та волонтерського використання.
-                    </p>
+                    </Text>
                 </div>
 
                 <div className={styles.heroImageSection}>
@@ -23,11 +24,11 @@ export function AboutPage(){
 
             <section className={styles.missionSection}>
                 <div className={styles.missionText}>
-                    <h2>НАША МІСІЯ</h2>
-                    <p>
+                    <Title variant = "secondary" className = {styles.sectionSubTitle}>НАША МІСІЯ</Title>
+                    <Text variant = "secondary">
                         Допомагати тим, хто стоїть на передовій — у прямому й переносному сенсі. <br/>
                         Ми обираємо тільки надійну техніку, яку перевіряємо самі. Наша мета — якість, простота, і підтримка на кожному етапі: від покупки до використання.
-                    </p>
+                    </Text>
                 </div>
 
                 <div className={styles.missionImage} style = {{"--grad-color": "#9C9088"} as React.CSSProperties}>
@@ -41,10 +42,10 @@ export function AboutPage(){
                 </div>
 
                 <div className={styles.missionText}>
-                    <h2>КОМАНДА, ЯКІЙ МОЖНА ДОВІРЯТИ</h2>
-                    <p>
+                    <Title variant = "secondary" className = {styles.sectionSubTitle}>КОМАНДА, ЯКІЙ МОЖНА ДОВІРЯТИ</Title>
+                    <Text variant = "secondary">
                         Ми — не просто магазин. Ми — фахівці, які самі працюють із цією технікою й консультують з досвіду. Засновники проєкту — волонтери, військові та IT-спеціалісти, які об'єднали зусилля задля важливої справи.
-                    </p>
+                    </Text>
                 </div>
             </section>
         </div>

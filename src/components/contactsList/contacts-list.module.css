@@ -1,0 +1,54 @@
+.contactListMain{
+    display: flex;
+    width: 668px;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.contactListHeader{
+    font-size: 24px;
+    color: rgba(12, 18, 42, 1);
+}
+
+.contactListInner{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.contactListBlock{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.contactListVector{
+    width: 24px;
+    height: 24px;
+}
+
+.contactListDesc{
+    color: rgba(109, 113, 127, 1);
+    font-size: 20px;
+}
+
+.contactsListBottom{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contactsListFinishingH{
+    color: rgba(12, 18, 42, 1);
+    font-size: 20px;
+}
+
+.contactsListSocNetworks{
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,1 @@
+export { UsePost } from "./generic-post-hook"

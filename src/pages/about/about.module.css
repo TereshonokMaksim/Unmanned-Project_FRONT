@@ -23,15 +23,8 @@
 	gap: 24px;
 }
 
-.aboutSection h1 {
-    font-size: 44px;
-    font-family: "GTWP Ultrabold", sans-serif;
-    color: #CDD5DD;
-}
-
 .aboutSection p {
 	max-width: 800px;
-	color: rgba(61, 65, 85, 0.8);
 }
 
 .heroImageSection {
@@ -65,8 +58,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: row;
 	gap: 60px;
 	padding: 0 80px 120px;
+}
+
+.missionSection p{
+	text-align: left;
 }
 
 .missionText {
@@ -77,15 +75,8 @@
 	gap: 45px;
 }
 
-.missionText h2 {
-	font-size: 44px;
-	color: rgba(12, 18, 42, 1);
-}
-
-.missionText p {
-	width: 100%;
-	font-size: 16px;
-	color: rgba(61, 65, 85, 0.8);
+.sectionSubTitle {
+	text-align: start;
 }
 
 .missionImage{

@@ -1,15 +1,17 @@
+/* ALL PAGES (NOT EXCLUSIVE) */
 export { Header } from './header'
 export { Main } from './main'
 export { Footer } from './footer'
-export { OrdersFooter } from "./OrdersFooter"
-
-export { NewProductCard } from "./newProductCard"
-export { CatalogueProductCard } from "./catalogProductCard"
-export { CatalogueCardList } from "./catalogCardList"
+export { OrdersFooter } from "./ordersFooter"
+export { RegisterForm } from "./forms"
+/* MAIN PAGE EXCLUSIVE */
 export { NewCardList } from "./newCardList"
-
+/* CATALOG PAGE EXCLUSIVE */
+export { CatalogueCardList } from "./catalogCardList"
 export { CatalogCategoryList } from "./catalogCategoryList"
 export { CatalogPaginationList } from "./catalogPaginationList"
-
-export { ProductMainInfoBlock } from "./productMainInfoBlock"
+/* PRODUCT PAGE EXCLUSIVE */
 export { ProductBlockList } from "./productBlockList"
+/* CONTACTS PAGE EXCLUSIVE */
+export { ContactPageForm } from "./forms"
+export { ContactsList } from "./contactsList"

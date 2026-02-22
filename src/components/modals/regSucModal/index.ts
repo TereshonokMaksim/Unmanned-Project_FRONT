@@ -1,0 +1,1 @@
+export { RegSucModal } from "./RegSucModal"

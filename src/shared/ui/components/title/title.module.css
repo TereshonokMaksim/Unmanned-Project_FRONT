@@ -1,0 +1,17 @@
+.titleGenericStyle{
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: wrap;
+    max-width: 100%;
+    font-size: 44px;
+}
+
+.primaryTitleVariant{
+    color: rgba(205, 213, 221, 1);
+    font-family: "GTWP UltraBold", sans-serif;
+}
+
+.secondaryTitleVariant{
+    color: rgba(12, 18, 42, 1);
+    font-family: "GTWP Regular", sans-serif;
+}
